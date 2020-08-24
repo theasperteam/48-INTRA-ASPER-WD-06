@@ -1,0 +1,224 @@
+body{
+	box-sizing: border-box;
+	background-image: url(bg.jpg);
+}
+.links{
+  grid-area: links;
+}
+.social{
+  grid-area: social;
+}
+.subscribe{
+  grid-area: subscribe;
+}
+footer{
+  display: grid;
+  grid-template-areas:
+		'links' 'subscribe' 'social'; 
+  margin-top: 30vh;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+@media (min-width: 43em){
+  footer{
+  	display: grid;
+  	grid-template-columns: 1fr 1fr;
+  	grid-template-rows: auto;
+  	grid-template-areas: 
+    	'links subscribe'
+    	'social social';
+	}
+}
+@media (min-width: 62em){
+  footer{
+  	display: grid;
+  	grid-template-columns: 1fr 2fr 1fr;
+  	grid-template-areas: 'links social subscribe';
+  }
+}
+.box{
+	background: linear-gradient(145deg, black, #333536);
+	padding: 1em;
+	margin: .5em;
+    color: rgb(163, 51, 10);
+    letter-spacing: 3px;
+    font-family: 'Creepster', cursive;
+	transition: color 4s;
+	border: 4px solid rgba(79, 3, 3, 0.1);
+	border-radius: 20px;
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 5px rgba(255, 255, 255, 0.4),
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.gallery{
+    display: flex;
+    width: 80%;
+    min-height: 100px;
+    justify-content: space-evenly;
+    margin-left: 10%;
+}
+.img1{
+    width: 25%;
+    
+}
+.img1:hover{
+    transform:scale(1.1);
+    filter:brightness(1.2);
+    transition:  .4s all linear;
+    
+}
+
+.links h2{
+  margin-bottom: 2em;
+}
+.social a{
+	height: 1em;
+  width: 1em;
+	border-radius: 10px;
+  font-size: 2em; 
+  padding: 0.2em;
+	border: 2px solid rgba(79, 3, 3, 0.1);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 5px rgba(255, 255, 255, 0.4),
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.fa{
+  text-decoration: none;
+  margin: 1em;
+  border: none;
+  color: #60584d;
+  transition: all .3s ease-in-out;
+}
+.fa-facebook:hover{
+  color: #3B5998;
+	background: linear-gradient(145deg, #e0e9f3, #bcc4cc);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.fa-twitter:hover{
+  color: #55ACEE;
+	background: linear-gradient(145deg, #e0e9f3, #bcc4cc);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.fa-youtube:hover{
+  color: #bb0000;
+	background: linear-gradient(145deg, #e0e9f3, #bcc4cc);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.fa-instagram:hover{
+  color: #125688;
+	background: linear-gradient(145deg, #e0e9f3, #bcc4cc);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.fa:active{
+  background: #e4e2e2;
+  box-shadow:
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 5px rgba(255, 255, 255, 0.4);
+}
+#adresses{
+    font-family: cursive;
+    text-transform: capitalize;
+    color: wheat;
+    font-size:14px ;
+    letter-spacing: normal;
+}
+.subscribe input{
+  margin-top: 2em;
+  width: 80%;
+  padding: .5em;
+  border-radius: 10px;
+  border: 2px solid #d1dae3;
+  font-size: 1.2em;
+  outline: none;
+  color: #60584d;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ebe5e5;
+  box-shadow:
+		inset -5px -5px 5px rgba(46, 45, 45, 0.4),
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+button {
+  margin-top: 2.5em;
+  padding: .7em 1.2em;
+  font-size: 1.1rem;
+  font-family: 'Shojumaru', cursive;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #60584d;
+  background: none;
+  border: 2px solid rgba(79, 3, 3, 0.1);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 5px rgba(255, 255, 255, 0.4),
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+button:hover{
+	color: #e28503;
+  background: linear-gradient(145deg, #e0e9f3, #bcc4cc);
+	box-shadow:
+		-5px -5px 5px rgba(255, 255, 255, 0.4),
+		5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+button:active{
+  background: #e4e2e2;
+  box-shadow:
+		inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+		inset -5px -5px 5px rgba(255, 255, 255, 0.4);
+}
+.hr{
+  margin-top: 1.5em;
+  border: 1px solid orangered;
+}
+#copyright{
+  color: #60584d;
+  margin-top: 1.5em;
+  font-family: 'Shojumaru', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
